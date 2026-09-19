@@ -1,0 +1,53 @@
+TASK 5: WEB DATA EXTRACTION & ANALYSIS
+SHORT REPORT
+
+Source Website:
+Quotes to Scrape — https://quotes.toscrape.com/
+
+1. OBJECTIVE
+The objective was to collect publicly available structured information from a website using Python web-scraping techniques, clean the collected data, export it to CSV/Excel, and perform exploratory analysis.
+
+2. TOOLS USED
+- Python
+- Requests
+- BeautifulSoup
+- Pandas
+- Matplotlib
+- OpenPyXL
+
+3. DATA COLLECTION
+Nine catalog pages were reviewed from the public Quotes to Scrape practice website. The extracted dataset contains author names, tags, page numbers, record positions, tag counts, and source URLs.
+
+Total extracted records: 90
+Pages covered: 1 to 9
+Duplicate records after cleaning: 0
+
+4. DATA CLEANING
+The following steps were performed:
+- Removed unnecessary whitespace from author and tag fields.
+- Converted tag counts to numeric values.
+- Filled empty tag values with blank strings.
+- Removed duplicate records.
+- Created a unique Record_ID for each record.
+- Stored the source page URL for traceability.
+
+5. EDA FINDINGS
+- Most frequently represented author in the extracted sample: Albert Einstein (10 records).
+- Most frequent tag: love (13 occurrences).
+- Average number of tags per record: 2.36.
+- The dataset contains 44 unique authors.
+- The most common themes in the sample include love, inspirational topics, life, humor, books, reading, friendship, and related subjects.
+
+6. PAGE-LEVEL ANALYSIS
+Each page contributed approximately 10 records. Page-level analysis can be used to verify scraping consistency and monitor whether the website structure changes during automated collection.
+
+7. OUTPUT FILES
+- Task_5_Quotes_Web_Extraction_Dataset.csv
+- task5_scraper.py
+- task5_top_authors.png
+- task5_top_tags.png
+
+8. CONCLUSION
+The task demonstrates an end-to-end web data extraction workflow: accessing a public practice website, parsing HTML with BeautifulSoup, organizing the results with Pandas, cleaning the data, performing exploratory analysis, and exporting the final dataset.
+
+The scraper is designed to automate collection across multiple pages and can be extended to collect additional fields such as quote text or author profile URLs when required.
